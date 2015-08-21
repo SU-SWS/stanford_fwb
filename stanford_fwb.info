@@ -1,0 +1,16 @@
+name = Stanford Full Width Banner
+description = Displays a random slide with a full-width banner view mode.
+core = 7.x
+package = Stanford
+version = 7.x-1.0
+dependencies[] = ds
+dependencies[] = image
+dependencies[] = views
+features[ctools][] = ds:ds:1
+features[ctools][] = views:views_default:3.0
+features[ds_view_modes][] = stanford_full_width_banner
+features[features_api][] = api:2
+features[image][] = full-width-banner
+features[views_view][] = stanford_slides_full_width_banner
+features_exclude[dependencies][ctools] = ctools
+project path = sites/default/modules/stanford
