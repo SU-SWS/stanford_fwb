@@ -1,0 +1,72 @@
+.main-top > .container {
+    width: 100%;
+}
+
+.full-width-banner img {
+    width: 100%;
+}
+
+.banner-overlay {
+ position: relative;
+ width: 1170px;
+ margin-left: auto;
+ margin-right: auto;
+}
+.banner-overlay.carousel-position-right > div {
+    right: 0;
+}
+.banner-overlay > div {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+    bottom: 68px;
+    color: white;
+    padding: 30px 40px;
+    position: absolute;
+    top: auto;
+    width: 32%; 
+}
+.banner-overlay h2, .banner-overlay p, .banner-overlay-caption {
+ color: white;   
+}
+.banner-overlay a, .banner-overlay a.more-link, .banner-overlay .more-link a {
+    color: #c6af6f;
+}
+.banner-overlay a:hover, .banner-overlay a.more-link:hover, .banner-overlay .more-link a:hover,
+.banner-overlay a:focus, .banner-overlay a.more-link:focus, .banner-overlay .more-link a:focus {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+ .banner-overlay {
+     width: 940px;
+ }
+ .banner-overlay > div {
+     width: 35%;
+ }
+}
+@media (max-width: 979px) {
+ .banner-overlay {
+     width: 724px;
+ }
+ .banner-overlay > div {
+     width: 50%;
+ }
+}
+@media (max-width: 767px) {
+ .main-top > .container {
+     margin-left: 0;
+ }
+ .banner-overlay {
+    height: auto;
+    position: inherit;
+    width: 100%;
+ }
+ .banner-overlay > div {
+    max-width: 100%;
+    position: inherit;
+    width: 100%;
+ }
+}

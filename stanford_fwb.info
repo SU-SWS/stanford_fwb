@@ -6,6 +6,7 @@ version = 7.x-1.0
 dependencies[] = ds
 dependencies[] = image
 dependencies[] = views
+stylesheets[all][] = css/stanford_fwb.css
 features[ctools][] = ds:ds:1
 features[ctools][] = views:views_default:3.0
 features[ds_view_modes][] = stanford_full_width_banner
