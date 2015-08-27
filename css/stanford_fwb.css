@@ -1,4 +1,4 @@
-.main-top > .container {
+.front .main-top > .container {
     width: 100%;
 }
 
@@ -6,16 +6,16 @@
     width: 100%;
 }
 
-.banner-overlay {
+.full-width-banner .banner-overlay {
  position: relative;
  width: 1170px;
  margin-left: auto;
  margin-right: auto;
 }
-.banner-overlay.carousel-position-right > div {
+.full-width-banner .banner-overlay.carousel-position-right > div {
     right: 0;
 }
-.banner-overlay > div {
+.full-width-banner .banner-overlay > div {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -27,44 +27,52 @@
     top: auto;
     width: 32%; 
 }
-.banner-overlay h2, .banner-overlay p, .banner-overlay-caption {
+.full-width-banner .banner-overlay h2, 
+.full-width-banner .banner-overlay p, 
+.full-width-banner .banner-overlay-caption {
  color: white;   
 }
-.banner-overlay a, .banner-overlay a.more-link, .banner-overlay .more-link a {
+.full-width-banner .banner-overlay a, 
+.full-width-banner .banner-overlay a.more-link, 
+.full-width-banner .banner-overlay .more-link a {
     color: #c6af6f;
 }
-.banner-overlay a:hover, .banner-overlay a.more-link:hover, .banner-overlay .more-link a:hover,
-.banner-overlay a:focus, .banner-overlay a.more-link:focus, .banner-overlay .more-link a:focus {
+.full-width-banner .banner-overlay a:hover, 
+.full-width-banner .banner-overlay a.more-link:hover, 
+.full-width-banner .banner-overlay .more-link a:hover,
+.full-width-banner .banner-overlay a:focus, 
+.full-width-banner .banner-overlay a.more-link:focus, 
+.full-width-banner .banner-overlay .more-link a:focus {
     color: white;
     text-decoration: underline;
 }
 
 @media (max-width: 1199px) {
- .banner-overlay {
+ .full-width-banner .banner-overlay {
      width: 940px;
  }
- .banner-overlay > div {
+ .full-width-banner .banner-overlay > div {
      width: 35%;
  }
 }
 @media (max-width: 979px) {
- .banner-overlay {
+ .full-width-banner .banner-overlay {
      width: 724px;
  }
- .banner-overlay > div {
+ .full-width-banner .banner-overlay > div {
      width: 50%;
  }
 }
 @media (max-width: 767px) {
- .main-top > .container {
+ .front .main-top > .container {
      margin-left: 0;
  }
- .banner-overlay {
+ .full-width-banner .banner-overlay {
     height: auto;
     position: inherit;
     width: 100%;
  }
- .banner-overlay > div {
+ .full-width-banner .banner-overlay > div {
     max-width: 100%;
     position: inherit;
     width: 100%;
