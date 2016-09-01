@@ -162,6 +162,115 @@ function stanford_fwb_views_default_views() {
 
   /* Display: Slide Block: Full Width */
   $handler = $view->new_display('block', 'Slide Block: Full Width', 'block');
+
+  /* Display: Slide Block: with credits */
+  $handler = $view->new_display('block', 'Slide Block: with credits', 'block_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_s_slide_link']['id'] = 'field_s_slide_link';
+  $handler->display->display_options['fields']['field_s_slide_link']['table'] = 'field_data_field_s_slide_link';
+  $handler->display->display_options['fields']['field_s_slide_link']['field'] = 'field_s_slide_link';
+  $handler->display->display_options['fields']['field_s_slide_link']['label'] = '';
+  $handler->display->display_options['fields']['field_s_slide_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_slide_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_slide_link']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_s_slide_link']['click_sort_column'] = 'url';
+  /* Field: Content: Caption Color */
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['id'] = 'field_s_slide_caption_color';
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['table'] = 'field_data_field_s_slide_caption_color';
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['field'] = 'field_s_slide_caption_color';
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['label'] = '';
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['alter']['text'] = 'carousel-[field_s_slide_caption_color]';
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_slide_caption_color']['type'] = 'list_key';
+  /* Field: Content: Caption Position - Horizontal */
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['id'] = 'field_s_slide_caption_position_h';
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['table'] = 'field_data_field_s_slide_caption_position_h';
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['field'] = 'field_s_slide_caption_position_h';
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['label'] = '';
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['alter']['text'] = 'carousel-position-[field_s_slide_caption_position_h]';
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_slide_caption_position_h']['type'] = 'list_key';
+  /* Field: Field collection item: Caption */
+  $handler->display->display_options['fields']['field_s_image_caption']['id'] = 'field_s_image_caption';
+  $handler->display->display_options['fields']['field_s_image_caption']['table'] = 'field_data_field_s_image_caption';
+  $handler->display->display_options['fields']['field_s_image_caption']['field'] = 'field_s_image_caption';
+  $handler->display->display_options['fields']['field_s_image_caption']['relationship'] = 'field_s_image_info_value';
+  $handler->display->display_options['fields']['field_s_image_caption']['label'] = '';
+  $handler->display->display_options['fields']['field_s_image_caption']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_image_caption']['alter']['max_length'] = '160';
+  $handler->display->display_options['fields']['field_s_image_caption']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_s_image_caption']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_s_image_caption']['alter']['preserve_tags'] = '<em> <strong>';
+  $handler->display->display_options['fields']['field_s_image_caption']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Credits */
+  $handler->display->display_options['fields']['field_s_image_credits']['id'] = 'field_s_image_credits';
+  $handler->display->display_options['fields']['field_s_image_credits']['table'] = 'field_data_field_s_image_credits';
+  $handler->display->display_options['fields']['field_s_image_credits']['field'] = 'field_s_image_credits';
+  $handler->display->display_options['fields']['field_s_image_credits']['relationship'] = 'field_s_image_info_value';
+  $handler->display->display_options['fields']['field_s_image_credits']['label'] = '';
+  $handler->display->display_options['fields']['field_s_image_credits']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_image_credits']['element_label_colon'] = FALSE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['element_class'] = 'edit-link';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Field collection item: Image */
+  $handler->display->display_options['fields']['field_s_image_image']['id'] = 'field_s_image_image';
+  $handler->display->display_options['fields']['field_s_image_image']['table'] = 'field_data_field_s_image_image';
+  $handler->display->display_options['fields']['field_s_image_image']['field'] = 'field_s_image_image';
+  $handler->display->display_options['fields']['field_s_image_image']['relationship'] = 'field_s_image_info_value';
+  $handler->display->display_options['fields']['field_s_image_image']['label'] = '';
+  $handler->display->display_options['fields']['field_s_image_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_image_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_image_image']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_s_image_image']['element_wrapper_class'] = 'banner-image';
+  $handler->display->display_options['fields']['field_s_image_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_s_image_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_s_image_image']['settings'] = array(
+    'image_style' => 'full-width-banner',
+    'image_link' => '',
+  );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="full-width-banner">
+
+<div class="banner-image">[field_s_image_image]</div>
+
+<div class="banner-overlay [field_s_slide_caption_color] [field_s_slide_caption_position_h]">
+  <div>
+  <div class="slide-title"><h2>[title]</h2></div>
+    <div class="slide-caption">[field_s_image_caption]</div>
+    <div class="slide-credits">[field_s_image_credits]</div>
+    <div class="more-link">[field_s_slide_link]</div>
+    <div class="edit-link">[edit_node]</div>
+ </div>
+</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $export['stanford_slides_full_width_banner'] = $view;
 
   return $export;
