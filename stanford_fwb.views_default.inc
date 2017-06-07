@@ -31,7 +31,7 @@ function stanford_fwb_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Field: Featured Image (field_s_image_info) */
+  /* Relationship: Field: Image (field_s_image_info) */
   $handler->display->display_options['relationships']['field_s_image_info_value']['id'] = 'field_s_image_info_value';
   $handler->display->display_options['relationships']['field_s_image_info_value']['table'] = 'field_data_field_s_image_info';
   $handler->display->display_options['relationships']['field_s_image_info_value']['field'] = 'field_s_image_info_value';
@@ -163,8 +163,8 @@ function stanford_fwb_views_default_views() {
   /* Display: Slide Block: Full Width */
   $handler = $view->new_display('block', 'Slide Block: Full Width', 'block');
 
-  /* Display: Midget block: caption and credits below */
-  $handler = $view->new_display('block', 'Midget block: caption and credits below', 'midget_block_caption_credits_below');
+  /* Display: Short block: caption and credits below */
+  $handler = $view->new_display('block', 'Short block: caption and credits below', 'shorts_block_caption_credits_below');
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -212,7 +212,7 @@ function stanford_fwb_views_default_views() {
   $handler->display->display_options['fields']['field_s_image_image']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_s_image_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_image_image']['settings'] = array(
-    'image_style' => 'full_width_banner_midget_scale_and_crop_1600x400',
+    'image_style' => 'full_width_banner_shorts_scale_and_crop_1600x400',
     'image_link' => '',
   );
   /* Field: Field collection item: Caption */
